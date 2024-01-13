@@ -22,13 +22,13 @@ const links = [
 ];
 
 export default function NavLinks() {
+  // Move the usePathname hook call here, directly within the component's scope
+  const pathname = usePathname();
+
   return (
-    
     <>
-    
       {links.map((link) => {
         const LinkIcon = link.icon;
-        const pathname = usePathname();
 
         return (
           <Link
